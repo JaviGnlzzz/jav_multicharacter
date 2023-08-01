@@ -1,6 +1,6 @@
 # jav_multicharacter
 
-Rediseño del de esx , version no me acuerdo, si tienen algun problema no me hablan al MD pidan ayuda en este mi discord en el canal de support :D
+Rediseño del de esx , version no me acuerdo, si tienen algun problema no me hablen al MD pidan ayuda en mi discord en el canal de support :D
 
 Preview:
 
