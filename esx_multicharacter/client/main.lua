@@ -9,7 +9,6 @@ if ESX.GetConfig().Multichar then
 			Wait(0)
 			if NetworkIsPlayerActive(PlayerId()) then
 				exports.spawnmanager:setAutoSpawn(false)
-				-- DoScreenFadeOut(0)
 				TriggerEvent("esx_multicharacter:SetupCharacters")
 				break
 			end
@@ -34,7 +33,6 @@ if ESX.GetConfig().Multichar then
 		RenderScriptCams(true, false, 1, true, true)
 		SetCamCoord(cam, offset.x, offset.y, offset.z)
 		PointCamAtCoord(cam, Config.Spawn.x, Config.Spawn.y, Config.Spawn.z + 1.3)
-		ESX.UI.HUD.SetDisplay(0.0)
 		StartLoop()
 		ShutdownLoadingScreen()
 		ShutdownLoadingScreenNui()
