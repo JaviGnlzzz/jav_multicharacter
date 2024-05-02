@@ -2,17 +2,11 @@ local mp_m_freemode_01 = `mp_m_freemode_01`
 local mp_f_freemode_01 = `mp_f_freemode_01`
 
 if ESX.GetConfig().Multichar then
-
 	CreateThread(function()
-		while not ESX.PlayerLoaded do
-			DoScreenFadeOut(0)
-			Wait(0)
-			if NetworkIsPlayerActive(PlayerId()) then
-				exports.spawnmanager:setAutoSpawn(false)
-				TriggerEvent("esx_multicharacter:SetupCharacters")
-				break
-			end
-		end
+		repeat Wait(800) until not ESX.IsPlayerLoaded()
+	
+		exports.spawnmanager:setAutoSpawn(false)
+		TriggerEvent("esx_multicharacter:SetupCharacters")
 	end)
 
 	local canRelog, cam, spawned = true, nil, nil
