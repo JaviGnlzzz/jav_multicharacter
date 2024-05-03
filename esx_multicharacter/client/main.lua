@@ -3,7 +3,7 @@ local mp_f_freemode_01 = `mp_f_freemode_01`
 
 if ESX.GetConfig().Multichar then
 	CreateThread(function()
-		repeat Wait(800) until not ESX.IsPlayerLoaded()
+		repeat Wait(800) until NetworkIsPlayerActive(PlayerId())
 	
 		exports.spawnmanager:setAutoSpawn(false)
 		TriggerEvent("esx_multicharacter:SetupCharacters")
